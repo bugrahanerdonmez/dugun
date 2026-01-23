@@ -1,0 +1,65 @@
+:root {
+  --bg: #faf7f4;
+  --text: #3a2f2a;
+  --btn: #c9a46a;
+}
+
+.dark {
+  --bg: #0e0e0e;
+  --text: #ffffff;
+  --btn: #333;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+}
+
+.section {
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+button, .map-btn, .upload-btn {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 15px;
+  background: var(--btn);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.hero {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+.couple-img {
+  width: 80%;
+  max-width: 300px;
+  border-radius: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.grid img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.theme-switch {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
