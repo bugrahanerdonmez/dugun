@@ -1,20 +1,22 @@
-/* JS aktif flag */
-document.documentElement.classList.add("js");
-
-/* Scroll fonksiyonu */
-function go(id) {
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth" });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* JS aktif flag */
+  document.documentElement.classList.add("js");
+
+  /* Scroll */
+  window.go = function (id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
 
   /* Fade-in */
   const sections = document.querySelectorAll(".section");
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("show");
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
       });
     });
     sections.forEach(s => observer.observe(s));
@@ -70,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
       el.innerHTML = `⏳ ${days} gün ${hours} saat ${minutes} dk kaldı`;
     }
   }, 1000);
-
 });
 
 /* Müzik */
