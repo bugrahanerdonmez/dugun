@@ -83,8 +83,8 @@ body {
   z-index: 999;
 }
 
-#countdown {
-  font-size: 20px;
+.countdown {
   margin-top: 20px;
+  font-size: 20px;
   font-weight: bold;
 }
