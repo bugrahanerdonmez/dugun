@@ -23,7 +23,7 @@ body {
   min-height: 100vh;
 }
 
-/* JS aktifse animasyon */
+/* JS animasyonları */
 .js .section {
   opacity: 0;
   transform: translateY(40px);
@@ -36,7 +36,9 @@ body {
 }
 
 /* Butonlar */
-button, .map-btn, .upload-btn {
+button,
+.map-btn,
+.upload-btn {
   display: block;
   width: 80%;
   margin: 10px auto;
@@ -123,7 +125,7 @@ button:active,
   border-radius: 12px;
 }
 
-/* Müzik butonu */
+/* Müzik */
 .music-btn {
   position: fixed;
   bottom: 20px;
