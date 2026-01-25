@@ -6,7 +6,7 @@
 
 .dark {
   --bg: #0e0e0e;
-  --text: #ffffff;
+  --text: #fff;
   --btn: #333;
 }
 
@@ -23,42 +23,6 @@ body {
   min-height: 100vh;
 }
 
-/* JS animasyonları */
-.js .section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.js .section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Butonlar */
-button,
-.map-btn,
-.upload-btn {
-  display: block;
-  width: 80%;
-  margin: 10px auto;
-  padding: 15px;
-  background: var(--btn);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-button:active,
-.map-btn:active,
-.upload-btn:active {
-  transform: scale(0.96);
-}
-
-/* Görseller */
 .hero {
   width: 90%;
   max-width: 400px;
@@ -71,7 +35,18 @@ button:active,
   border-radius: 20px;
 }
 
-/* Galeri */
+.btn, button {
+  width: 80%;
+  margin: 10px auto;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: var(--btn);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -82,57 +57,34 @@ button:active,
 .grid img {
   width: 100%;
   border-radius: 12px;
-  cursor: pointer;
 }
 
-/* Tema switch */
 .theme-switch {
   position: fixed;
   top: 15px;
   right: 15px;
-  z-index: 999;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,.8);
   padding: 6px 10px;
   border-radius: 12px;
+  z-index: 999;
 }
 
 .dark .theme-switch {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,.6);
   color: white;
 }
 
-/* Countdown */
-#countdown {
-  font-size: 20px;
-  margin-top: 25px;
-  font-weight: bold;
-}
-
-/* Lightbox */
-#lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-#lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
-}
-
-/* Müzik */
 .music-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: auto;
   padding: 10px 15px;
   border-radius: 50px;
-  font-size: 14px;
   z-index: 999;
+}
+
+#countdown {
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
 }
