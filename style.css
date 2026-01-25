@@ -111,3 +111,9 @@ button:active,
   background: rgba(0,0,0,0.6);
   color: white;
 }
+
+#countdown {
+  font-size: 20px;
+  margin-top: 25px;
+  font-weight: bold;
+}
