@@ -1,24 +1,39 @@
+/* JS aktif işareti (CSS animasyon güvenliği için) */
+document.documentElement.classList.add("js");
+
+/* Scroll fonksiyonu (HTML onclick için) */
+function go(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Smooth scroll
-  window.go = function (id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-  };
+  /* ===========================
+     FADE-IN ANİMASYON
+  =========================== */
+  const sections = document.querySelectorAll(".section");
 
-  // Scroll fade-in animation
-  const sections = document.querySelectorAll('.section');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
     });
-  });
 
-  sections.forEach(section => observer.observe(section));
+    sections.forEach(s => observer.observe(s));
+  } else {
+    /* Eski tarayıcı fallback */
+    sections.forEach(s => s.classList.add("show"));
+  }
 
-  // Theme toggle + remember
+  /* ===========================
+     TEMA SWITCH + HATIRLAMA
+  =========================== */
   const toggle = document.getElementById("themeToggle");
 
   if (toggle) {
@@ -36,18 +51,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Lightbox
+  /* ===========================
+     GALERİ LIGHTBOX (opsiyonel)
+  =========================== */
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
 
-  document.querySelectorAll(".grid img").forEach(img => {
-    img.addEventListener("click", () => {
-      lightbox.style.display = "flex";
-      lightboxImg.src = img.src;
+  if (lightbox && lightboxImg) {
+    document.querySelectorAll(".grid img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
     });
-  });
 
-  if (lightbox) {
     lightbox.addEventListener("click", () => {
       lightbox.style.display = "none";
     });
