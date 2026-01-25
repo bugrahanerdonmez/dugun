@@ -18,31 +18,39 @@ toggle.addEventListener("change", () => {
   );
 });
 
-// music
-const music = document.getElementById("music");
-const musicBtn = document.getElementById("musicBtn");
+// music (FIXED)
+document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("music");
+  const musicBtn = document.getElementById("musicBtn");
 
-musicBtn.addEventListener("click", () => {
-  if (music.paused) {
-    music.play();
-    musicBtn.textContent = "⏸️ Duraklat";
-  } else {
-    music.pause();
-    musicBtn.textContent = "🎵 Müzik";
-  }
+  musicBtn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      musicBtn.textContent = "⏸️ Duraklat";
+    } else {
+      music.pause();
+      musicBtn.textContent = "🎵 Müzik";
+    }
+  });
 });
 
-// countdown
-const weddingDate = new Date("2026-05-23T19:00:00").getTime();
-setInterval(() => {
-  const now = Date.now();
-  const diff = weddingDate - now;
-  if (diff < 0) return;
+// countdown (DÜĞÜN + NİKAH)
+function startCountdown(targetDate, elementId) {
+  const el = document.getElementById(elementId);
+  setInterval(() => {
+    const diff = targetDate - Date.now();
+    if (diff < 0) {
+      el.innerText = "Bugün 🎉";
+      return;
+    }
 
-  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const m = Math.floor((diff / (1000 * 60)) % 60);
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const m = Math.floor((diff / (1000 * 60)) % 60);
 
-  document.getElementById("countdown").innerText =
-    `⏳ ${d} gün ${h} saat ${m} dk kaldı`;
-}, 1000);
+    el.innerText = `⏳ ${d} gün ${h} saat ${m} dk kaldı`;
+  }, 1000);
+}
+
+startCountdown(new Date("2026-05-23T19:00:00").getTime(), "countdown-wedding");
+startCountdown(new Date("2026-05-09T14:30:00").getTime(), "countdown-nikah");
