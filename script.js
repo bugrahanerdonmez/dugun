@@ -1,47 +1,34 @@
-/* JS aktif işareti (CSS animasyon güvenliği için) */
+/* JS aktif flag */
 document.documentElement.classList.add("js");
 
-/* Scroll fonksiyonu (HTML onclick için) */
+/* Scroll fonksiyonu */
 function go(id) {
   const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
-  }
+  if (el) el.scrollIntoView({ behavior: "smooth" });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===========================
-     FADE-IN ANİMASYON
-  =========================== */
+  /* Fade-in */
   const sections = document.querySelectorAll(".section");
-
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-        }
+        if (entry.isIntersecting) entry.target.classList.add("show");
       });
     });
-
     sections.forEach(s => observer.observe(s));
   } else {
-    /* Eski tarayıcı fallback */
     sections.forEach(s => s.classList.add("show"));
   }
 
-  /* ===========================
-     TEMA SWITCH + HATIRLAMA
-  =========================== */
+  /* Theme switch */
   const toggle = document.getElementById("themeToggle");
-
   if (toggle) {
     if (localStorage.getItem("theme") === "dark") {
       document.body.classList.add("dark");
       toggle.checked = true;
     }
-
     toggle.addEventListener("change", () => {
       document.body.classList.toggle("dark");
       localStorage.setItem(
@@ -51,9 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ===========================
-     GALERİ LIGHTBOX (opsiyonel)
-  =========================== */
+  /* Lightbox */
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
 
@@ -64,10 +49,34 @@ document.addEventListener("DOMContentLoaded", () => {
         lightboxImg.src = img.src;
       });
     });
-
     lightbox.addEventListener("click", () => {
       lightbox.style.display = "none";
     });
   }
 
+  /* Countdown */
+  const weddingDate = new Date("2026-05-23T19:00:00").getTime();
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = weddingDate - now;
+    if (diff < 0) return;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+    const el = document.getElementById("countdown");
+    if (el) {
+      el.innerHTML = `⏳ ${days} gün ${hours} saat ${minutes} dk kaldı`;
+    }
+  }, 1000);
+
 });
+
+/* Müzik */
+const music = document.getElementById("music");
+function toggleMusic() {
+  if (!music) return;
+  if (music.paused) music.play();
+  else music.pause();
+}
