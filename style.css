@@ -23,9 +23,7 @@ body {
   min-height: 100vh;
 }
 
-/* ===========================
-   JS AKTİFSE ANİMASYON
-=========================== */
+/* JS aktifse animasyon */
 .js .section {
   opacity: 0;
   transform: translateY(40px);
@@ -37,12 +35,8 @@ body {
   transform: translateY(0);
 }
 
-/* ===========================
-   BUTONLAR
-=========================== */
-button,
-.map-btn,
-.upload-btn {
+/* Butonlar */
+button, .map-btn, .upload-btn {
   display: block;
   width: 80%;
   margin: 10px auto;
@@ -52,8 +46,8 @@ button,
   border: none;
   border-radius: 12px;
   text-decoration: none;
-  font-size: 16px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 button:active,
@@ -62,9 +56,7 @@ button:active,
   transform: scale(0.96);
 }
 
-/* ===========================
-   GÖRSELLER
-=========================== */
+/* Görseller */
 .hero {
   width: 90%;
   max-width: 400px;
@@ -77,9 +69,7 @@ button:active,
   border-radius: 20px;
 }
 
-/* ===========================
-   GALERİ GRID
-=========================== */
+/* Galeri */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -93,18 +83,15 @@ button:active,
   cursor: pointer;
 }
 
-/* ===========================
-   TEMA SWITCH
-=========================== */
+/* Tema switch */
 .theme-switch {
   position: fixed;
   top: 15px;
   right: 15px;
   z-index: 999;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.85);
   padding: 6px 10px;
   border-radius: 12px;
-  font-size: 14px;
 }
 
 .dark .theme-switch {
@@ -112,8 +99,38 @@ button:active,
   color: white;
 }
 
+/* Countdown */
 #countdown {
   font-size: 20px;
   margin-top: 25px;
   font-weight: bold;
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+/* Müzik butonu */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: auto;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 14px;
+  z-index: 999;
 }
