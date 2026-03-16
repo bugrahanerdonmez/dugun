@@ -1,86 +1,154 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Damla & Buğrahan</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<title>Damla & Buğrahan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
 </head>
+
 <body>
 
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="logo">Damla & Buğrahan</div>
+<header class="navbar">
+<div class="nav-container">
 
-      <nav class="nav-menu">
-        <button onclick="go('couple')">Davetiye</button>
-        <button onclick="go('wedding')">Düğün</button>
-        <button onclick="go('nikah')">Nikah</button>
-        <button onclick="go('gallery')">Galeri</button>
-      </nav>
+<div class="logo">Damla & Buğrahan</div>
 
-      <div class="theme-switch">
-        <label>
-          <input type="checkbox" id="themeToggle">
-          <span>🌙 Modern</span>
-        </label>
-      </div>
-    </div>
-  </header>
+<nav class="nav-menu">
+<button onclick="go('couple')">Davetiye</button>
+<button onclick="go('wedding')">Düğün</button>
+<button onclick="go('nikah')">Nikah</button>
+<button onclick="go('gallery')">Galeri</button>
+</nav>
 
-  
-  <section id="home" class="section home-section">
-    <h1>Davetlisiniz 🤍</h1>
-        <img src="assets/topludavetiye.jpg" class="couple-img" alt="Damla ve Buğrahan">
-  </section>
+<div class="theme-switch">
+<label>
+<input type="checkbox" id="themeToggle">
+<span>🌙 Modern</span>
+</label>
+</div>
 
-  <section id="couple" class="section">
-    <h2>Damla & Buğrahan</h2>
-    <p>Bu mutlu günümüzde yanımızda olmanızdan mutluluk duyarız 🤍</p>
-    <img src="assets/giris.gif" class="hero" alt="Damla ve Buğrahan giriş görseli">
-  </section>
+</div>
+</header>
 
-  <section id="wedding" class="section">
-    <h2>Düğün</h2>
-    <p>📅 23 Mayıs 2026</p>
-    <p>📍 Bursa</p>
 
-    <a href="https://maps.app.goo.gl/PEMuoUz6maVuK7xYA" target="_blank" class="btn">Haritada Aç</a>
-    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Damla+%26+Buğrahan+Düğün&dates=20260523T160000/20260523T220000&location=Bursa" target="_blank" class="btn">Takvime Ekle 📅</a>
+<section id="home" class="section home-section">
+<h1>Davetlisiniz 🤍</h1>
+<img src="assets/topludavetiye.jpg" class="couple-img">
+</section>
 
-    <div id="countdown-wedding" class="countdown"></div>
-  </section>
 
-  <section id="nikah" class="section">
-    <h2>Nikah</h2>
-    <p>📅 9 Mayıs 2026</p>
-    <p>🕒 14:30</p>
-    <p>📍 İzmir</p>
+<section id="couple" class="section">
+<h2>Damla & Buğrahan</h2>
+<p>Bu mutlu günümüzde yanımızda olmanızdan mutluluk duyarız 🤍</p>
+<img src="assets/giris.gif" class="hero">
+</section>
 
-    <a href="https://maps.app.goo.gl/vnJYA7nR1GNJRDdS9" target="_blank" class="btn">Haritada Aç</a>
-    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Damla+%26+Buğrahan+Nikah&dates=20260509T113000/20260509T133000&location=Izmir" target="_blank" class="btn">Takvime Ekle 📅</a>
 
-    <div id="countdown-nikah" class="countdown"></div>
-  </section>
+<section id="wedding" class="section">
 
-  <section id="gallery" class="section">
-    <h2>Galeri</h2>
+<h2>Düğün</h2>
 
-    <div class="grid">
-      <img src="gallery/1.jpg" alt="Galeri görseli 1">
-      <img src="gallery/2.jpg" alt="Galeri görseli 2">
-      <img src="gallery/3.jpg" alt="Galeri görseli 3">
-      <img src="gallery/4.jpg" alt="Galeri görseli 4">
-      <img src="gallery/5.jpg" alt="Galeri görseli 5">
-      <img src="gallery/6.jpg" alt="Galeri görseli 6">
-    </div>
+<p>📅 23 Mayıs 2026</p>
+<p>📍 Bursa</p>
 
-    <a href="https://drive.google.com/drive/folders/1FcRQL5TADkqA2ccId3OTxw696_9SLisS?usp=sharing" target="_blank" class="btn">Fotoğraf Yükle 📸</a>
-  </section>
+<a href="https://maps.app.goo.gl/PEMuoUz6maVuK7xYA" target="_blank" class="btn">
+Haritada Aç
+</a>
 
-  <button id="musicBtn" class="music-btn">🎵 Müzik</button>
-  <audio id="music" src="assets/music.mp3" preload="auto"></audio>
+<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Damla+%26+Buğrahan+Düğün&dates=20260523T160000/20260523T220000&location=Bursa"
+target="_blank"
+class="btn">
+Takvime Ekle 📅
+</a>
 
-  <script src="script.js"></script>
+<div id="countdown-wedding" class="countdown"></div>
+
+</section>
+
+
+<section id="nikah" class="section">
+
+<h2>Nikah</h2>
+
+<p>📅 9 Mayıs 2026</p>
+<p>🕒 14:30</p>
+<p>📍 İzmir</p>
+
+<a href="https://maps.app.goo.gl/vnJYA7nR1GNJRDdS9" target="_blank" class="btn">
+Haritada Aç
+</a>
+
+<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Damla+%26+Buğrahan+Nikah&dates=20260509T113000/20260509T133000&location=Izmir"
+target="_blank"
+class="btn">
+Takvime Ekle 📅
+</a>
+
+<div id="countdown-nikah" class="countdown"></div>
+
+</section>
+
+
+<section id="gallery" class="section">
+
+<h2>Galeri</h2>
+
+<div class="swiper gallerySwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<img src="gallery/1.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="gallery/2.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="gallery/3.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="gallery/4.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="gallery/5.jpg">
+</div>
+
+<div class="swiper-slide">
+<img src="gallery/6.jpg">
+</div>
+
+</div>
+
+</div>
+
+
+<a href="https://drive.google.com/drive/folders/1FcRQL5TADkqA2ccId3OTxw696_9SLisS?usp=sharing"
+target="_blank"
+class="btn">
+Fotoğraf Yükle 📸
+</a>
+
+</section>
+
+
+<button id="musicBtn" class="music-btn">🎵 Müzik</button>
+<audio id="music" src="assets/music.mp3"></audio>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
