@@ -31,7 +31,6 @@ body {
 }
 
 /* HEADER */
-
 .navbar {
   position: sticky;
   top: 0;
@@ -67,7 +66,6 @@ body {
 }
 
 /* SECTIONS */
-
 .section {
   padding: 90px 20px 60px;
   min-height: 100vh;
@@ -88,7 +86,6 @@ p {
 }
 
 /* IMAGES */
-
 .hero {
   width: 90%;
   max-width: 420px;
@@ -106,7 +103,6 @@ p {
 }
 
 /* BUTTONS */
-
 .btn,
 button {
   display: inline-block;
@@ -134,8 +130,7 @@ button:active {
   transform: scale(0.98);
 }
 
-/* GALLERY GRID (ESKİ GALERİ — YİNE KALSIN) */
-
+/* GALLERY */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -152,37 +147,7 @@ button:active {
   object-fit: cover;
 }
 
-/* NETFLIX STYLE SLIDER */
-
-.gallerySwiper {
-  width: 100%;
-  max-width: 900px;
-  margin: 40px auto;
-  overflow: visible;
-}
-
-.swiper-slide {
-  transition: all 0.4s ease;
-  transform: scale(0.75);
-  filter: blur(4px);
-  opacity: 0.5;
-}
-
-.swiper-slide img {
-  width: 100%;
-  border-radius: 16px;
-  display: block;
-}
-
-.swiper-slide-active {
-  transform: scale(1);
-  filter: none;
-  opacity: 1;
-  z-index: 10;
-}
-
 /* THEME SWITCH */
-
 .theme-switch {
   display: flex;
   align-items: center;
@@ -199,7 +164,6 @@ button:active {
 }
 
 /* MUSIC BUTTON */
-
 .music-btn {
   position: fixed;
   bottom: 20px;
@@ -210,7 +174,6 @@ button:active {
 }
 
 /* COUNTDOWN */
-
 .countdown {
   margin-top: 20px;
   font-size: 20px;
@@ -218,7 +181,6 @@ button:active {
 }
 
 /* MOBILE */
-
 @media (max-width: 768px) {
   .nav-container {
     flex-direction: column;
