@@ -26,6 +26,8 @@ A beautiful and personalized wedding website for Damla and Bugrahan's special da
 
 - Edit the HTML, CSS, and JavaScript files to customize the content.
 - Add your own images to the `gallery/` folder.
+- Add your locations and calender invites links
+- Edit the events ino areas
 - Deploy to a web hosting service like GitHub Pages, Netlify, or Vercel.
 
 ## Technologies Used
