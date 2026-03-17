@@ -1,94 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
+
 <head>
-<meta charset="UTF-8">
-<title>Damla & Buğrahan</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>Damla & Buğrahan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400&display=swap"
+        rel="stylesheet" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
+    <header class="navbar">
+        <button id="musicBtn">
+            <span id="musicIcon" class="play"></span>
+            Müzik Çal
+        </button>
 
-<header class="navbar">
-  <button id="musicBtn">🎵</button>
-  <div class="logo">Damla & Buğrahan</div>
+        <div class="logo">Damla & Buğrahan</div>
 
-    <a href="https://drive.google.com/drive/folders/1FcRQL5TADkqA2ccId3OTxw696_9SLisS?usp=sharing"
-    target="_blank"
-    class="upload-btn">
-    📸 Fotoğraf Yükle
-    </a>
-</header>
+        <a href="https://drive.google.com/drive/folders/1FcRQL5TADkqA2ccId3OTxw696_9SLisS?usp=sharing" target="_blank"
+            class="upload-btn">
+            📸 Fotoğraf Yükle
+        </a>
+    </header>
 
+    <section class="main fade-up">
+        <h1>Davetlisiniz 🤍</h1>
 
-<section class="main fade-up">
+        <div class="invite-card">
+            <img src="assets/topludavetiye.jpg" class="invite-img" />
+        </div>
 
-<h1>Davetlisiniz 🤍</h1>
+        <div class="events">
+            <div class="event-card fade-up">
+                <h2>Nikah</h2>
+                <p>📅 9 Mayıs 2026</p>
+                <p>🕒 14:30</p>
+                <p>📍 İzmir</p>
 
-<img src="assets/topludavetiye.jpg" class="invite-img">
+                <iframe src="https://www.google.com/maps?q=Zübeyde+Hanım+Evlendirme+Dairesi+Karşıyaka&z=16&output=embed"
+                    class="map">
+                </iframe>
 
-<div class="events">
+                <div class="event-buttons">
+                    <a href="https://maps.app.goo.gl/vnJYA7nR1GNJRDdS9" target="_blank" class="btn">
+                        Yol Tarifi Al
+                    </a>
 
-  <div class="event-card fade-up">
-    <h2>Nikah</h2>
-    <p>📅 9 Mayıs 2026</p>
-    <p>🕒 14:30</p>
-    <p>📍 İzmir</p>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Nikah&dates=20260509T113000/20260509T133000&location=Izmir"
+                        target="_blank" class="btn">
+                        Takvime Ekle
+                    </a>
+                </div>
 
-    <iframe src="https://www.google.com/maps?q=izmir+evlendirme+daire&output=embed" class="map"></iframe>
+                <div id="countdown-nikah" class="countdown"></div>
+            </div>
 
-    <div class="event-buttons">
-      <a href="#" class="btn">Harita</a>
-      <a href="#" class="btn">Takvim</a>
-    </div>
+            <div class="event-card fade-up">
+                <h2>Düğün</h2>
+                <p>📅 23 Mayıs 2026</p>
+                <p>🕒 20:00</p>
+                <p>📍 Bursa</p>
 
-    <div id="countdown-nikah" class="countdown"></div>
-  </div>
+                <iframe src="https://www.google.com/maps?q=Açelya+Düğün+Salonları+Bursa&z=16&output=embed" class="map">
+                </iframe>
 
+                <div class="event-buttons">
+                    <a href="https://maps.app.goo.gl/PEMuoUz6maVuK7xYA" target="_blank" class="btn">
+                        Yol Tarifi Al
+                    </a>
 
-  <div class="event-card fade-up">
-    <h2>Düğün</h2>
-    <p>📅 23 Mayıs 2026</p>
-    <p>🕒 20:00</p>
-    <p>📍 Bursa</p>
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Düğün&dates=20260523T170000/20260523T210000&location=Bursa"
+                        target="_blank" class="btn">
+                        Takvime Ekle
+                    </a>
+                </div>
 
-    <iframe src="https://www.google.com/maps?q=bursa+dugun+salonu&output=embed" class="map"></iframe>
+                <div id="countdown-wedding" class="countdown"></div>
+            </div>
+        </div>
 
-    <div class="event-buttons">
-      <a href="#" class="btn">Harita</a>
-      <a href="#" class="btn">Takvim</a>
-    </div>
+        <img src="assets/giris.gif" class="gif fade-up" />
+    </section>
 
-    <div id="countdown-wedding" class="countdown"></div>
-  </div>
+    <section class="section fade-up">
+        <h2>Galeri 📸</h2>
 
-</div>
+        <div class="swiper gallerySwiper">
+            <div class="swiper-wrapper" id="galleryWrapper"></div>
+        </div>
+    </section>
 
-<img src="assets/giris.gif" class="gif fade-up">
+    <audio id="music" src="assets/music.mp3"></audio>
 
-</section>
-
-
-<section class="section fade-up">
-
-<h2>Galeri</h2>
-
-<div class="swiper gallerySwiper">
-  <div class="swiper-wrapper" id="galleryWrapper"></div>
-</div>
-
-</section>
-
-<audio id="music" src="assets/music.mp3"></audio>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

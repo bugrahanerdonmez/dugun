@@ -1,5 +1,3 @@
-// GALLERY LOOP
-
 const galleryWrapper = document.getElementById("galleryWrapper");
 
 for (let i = 1; i <= 15; i++) {
@@ -34,19 +32,20 @@ new Swiper(".gallerySwiper", {
   },
 });
 
-// MUSIC
-
 document.getElementById("musicBtn").onclick = () => {
   const music = document.getElementById("music");
+  const icon = document.getElementById("musicIcon");
 
   if (music.paused) {
     music.play();
+    icon.classList.remove("play");
+    icon.classList.add("pause");
   } else {
     music.pause();
+    icon.classList.remove("pause");
+    icon.classList.add("play");
   }
 };
-
-// COUNTDOWN
 
 function startCountdown(targetDate, elementId) {
   const el = document.getElementById(elementId);
